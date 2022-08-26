@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Novelty</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="img/logo.png" />
+
+        <ul class="nav_menu">
+          <li><a href="">About us</a></li>
+          <li><a href="">Offerings</a></li>
+          <li><a href="">Contacts</a></li>
+          <li><a href="">Invester relations</a></li>
+          <li><a href="">Industries</a></li>
+          <li><a href="">Join us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h1>We are NOVELTY</h1>
+        <h3>
+          Accelerating digital excellence to
+          <span class="highlighted">unlock potential</span>, drive growth and
+          deliver purposes
+        </h3>
+        <p>
+          <a class="learn_more" href=""
+            >learn more <img src="img/arrow.png" />
+          </a>
+        </p>
+      </div>
+      <div>
+        <div class="display_container">
+          <img class="header_slides" src="" />
+          <img class="header_slides" src="" />
+          <img class="header_slides" src="" />
+          <img class="header_slides" src="" />
+
+          <span class="change_header" onclick="currentDiv(1)"
+            ><img src="img/grey_line.png"
+          /></span>
+          <span class="change_header" onclick="currentDiv(2)"
+            ><img src="img/grey_line.png"
+          /></span>
+          <span class="change_header" onclick="currentDiv(3)"
+            ><img src="img/grey_line.png"
+          /></span>
+          <span class="change_header" onclick="currentDiv(4)"
+            ><img src="img/grey_line.png"
+          /></span>
+        </div>
+      </div>
+    </header>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("header_slides");
+        var lines = document.getElementsByClassName("change_header");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < lines.length; i++) {
+          lines[i].className = lines[i].className.replace(
+            " switching_lines",
+            ""
+          );
+        }
+        x[slideIndex - 1].style.display = "block";
+        lines[slideIndex - 1].className += " switching_lines";
+      }
+    </script>
+  </body>
+</html>

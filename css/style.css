@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  position: relative;
+  width: 1280px;
+  height: 70px;
+  left: 320px;
+  top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  width: 1920px;
+  height: 980px;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+
+  background-image: url(../img/image.png);
+  background-size: cover;
+}
+
+.nav_menu {
+  position: relative;
+  list-style-type: none;
+  width: 65%;
+  /* width: 81px;*/
+  height: 24px;
+  margin: auto;
+  top: 0;
+  float: right;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+h1 {
+  position: relative;
+  width: 604px;
+  height: 208px;
+  left: 320px;
+  top: 130px;
+
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 82px;
+  line-height: 90%;
+  /* or 74px */
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+h3 {
+  position: relative;
+  width: 616px;
+  height: 76px;
+  left: 324px;
+  top: 100px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: #ffffff;
+}
+.highlighted {
+  color: #8e8e8e;
+}
+.learn_more {
+  position: relative;
+  width: 161px;
+  height: 30px;
+  left: 324px;
+  top: 190px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+
+  /* identical to box height */
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: #df7517;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.change_header {
+  position: relative;
+  color: #4d4d4d;
+  width: 44px;
+  height: 0px;
+  left: 320px;
+  top: 320px;
+}
+/* .switching_lines {
+  position: relative;
+  color: #4d4d4d;
+  width: 44px;
+  height: 0px;
+  left: 320px;
+  top: 320px;
+  margin-right: 10px;
+} */
+.switching_lines::after {
+  color: #df7517;
+}
